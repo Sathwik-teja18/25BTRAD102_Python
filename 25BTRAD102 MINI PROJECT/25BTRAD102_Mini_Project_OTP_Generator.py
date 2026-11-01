@@ -114,7 +114,7 @@ class TOTPAuthenticator:
     def provisioning_uri(self, account_name, issuer="25BTRAD102"):
         """Build an otpauth URI for adding the secret to an authenticator app."""
         encoded_secret = base64.b32encode(self.secret).decode("ascii").rstrip("=")
-        label = quote(f"{issuer}:{account_name}", safe="")
+        label = quote(f"{issuer}:{account_name}", safe=":")
         parameters = urlencode({
             "secret": encoded_secret,
             "issuer": issuer,
