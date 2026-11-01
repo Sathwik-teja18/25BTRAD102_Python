@@ -66,16 +66,16 @@ def display_contacts():
     if not contacts:
         print("No contacts available.")
         return
-    print("\\n--- SAVED CONTACTS ---")
+    print("\n--- SAVED CONTACTS ---")
     for contact in contacts:
         print(f"{contact['name']} | {contact['phone']} | {contact['email']}")
 
 
 def main():
     while True:
-        print("\\n--- CONTACT BOOK ---")
-        print("1. Add Contact\\n2. Search Contact\\n3. Update Contact")
-        print("4. Delete Contact\\n5. Display Contacts\\n6. Exit")
+        print("\n--- CONTACT BOOK ---")
+        print("1. Add Contact\n2. Search Contact\n3. Update Contact")
+        print("4. Delete Contact\n5. Display Contacts\n6. Exit")
         choice = input("Enter your choice: ").strip()
 
         if choice == "1":
