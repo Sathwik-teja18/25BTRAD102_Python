@@ -5,7 +5,7 @@ import re
 
 def count_words(sentence):
     """Return a dictionary of case-insensitive word frequencies."""
-    words = re.findall(r"\\b[\\w']+\\b", sentence.casefold())
+    words = re.findall(r"\b[\w']+\b", sentence.casefold())
     frequency = {}
     for word in words:
         frequency[word] = frequency.get(word, 0) + 1
@@ -24,7 +24,7 @@ def main():
     sentence = input("Enter a sentence: ")
     frequency = count_words(sentence)
 
-    print("\\n--- WORD FREQUENCY ---")
+    print("\n--- WORD FREQUENCY ---")
     if not frequency:
         print("No words found.")
     else:
@@ -33,7 +33,7 @@ def main():
 
     # Example of counting repeated elements in a list:
     sample_numbers = [10, 20, 10, 30, 20, 10, 40, 30]
-    print("\\n--- SAMPLE LIST FREQUENCY ---")
+    print("\n--- SAMPLE LIST FREQUENCY ---")
     for number, count in count_elements(sample_numbers).items():
         print(f"{number}: {count}")
 
