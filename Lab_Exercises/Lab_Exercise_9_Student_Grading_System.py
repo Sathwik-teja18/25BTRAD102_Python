@@ -25,7 +25,7 @@ def main():
             return
 
         for _ in range(count):
-            name = input("\\nEnter student name: ").strip()
+            name = input("\nEnter student name: ").strip()
             if not name:
                 print("Name cannot be empty; this entry is skipped.")
                 continue
@@ -43,7 +43,7 @@ def main():
         print("Please enter a valid whole number for the student count.")
         return
 
-    print("\\n--- STUDENT RESULTS ---")
+    print("\n--- STUDENT RESULTS ---")
     if not students:
         print("No valid student records were entered.")
         return
