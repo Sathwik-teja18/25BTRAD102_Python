@@ -107,16 +107,16 @@ On some systems, use `python3` instead of `python`.
 
 Some programs read or create data files in the same folder as the Python source file:
 
-- **Lab Exercise 11 – Log File Reader:** provide an `application.log` text file containing log entries labelled `ERROR`, `WARNING`, or `INFO`.
-- **Lab Exercise 12 – Student Data Manager:** creates and updates `students.csv` automatically.
-- **Lab Exercise 13 – CSV Payroll Management:** provide an `employees.csv` file with this exact header:
+- **Lab Exercise 11 – Log File Reader:** the repository includes `application.log` with sample entries labelled `ERROR`, `WARNING`, and `INFO`.
+- **Lab Exercise 12 – Student Data Manager:** the repository includes `students.csv` with sample student records. The program creates the file automatically when it is absent and updates it as records are added or changed.
+- **Lab Exercise 13 – CSV Payroll Management:** the repository includes `employees.csv` with sample employee data and this exact header:
 
   ```csv
   employee_id,name,basic_salary,allowance,deduction_rate
   E001,Sample Employee,30000,5000,10
   ```
 
-  The deduction rate is entered as a percentage between 0 and 100.
+  The deduction rate is entered as a percentage between 0 and 100. These datasets contain sample data only; replace it with your own test records when required.
 
 ## OTP Generator Notes
 
