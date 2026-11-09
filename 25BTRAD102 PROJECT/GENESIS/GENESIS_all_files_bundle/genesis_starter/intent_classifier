@@ -1,0 +1,76 @@
+
+"""Inference interface for the GENESIS intent model."""
+
+from pathlib import Path
+
+import joblib
+
+MODEL_PATH = Path(__file__).resolve().parent / "genesis_intent_model.joblib"
+
+_classifier = None
+
+
+def load_classifier():
+    global _classifier
+
+    if _classifier is None:
+        if not MODEL_PATH.exists():
+            raise FileNotFoundError(
+                "Intent model not found. Run: python train_intent.py"
+            )
+
+        artifact = joblib.load(MODEL_PATH)
+        _classifier = artifact["pipeline"]
+
+    return _classifier
+
+
+def predict_intent(text: str, threshold: float = 0.55) -> dict:
+    """Predict an intent, returning unknown when confidence is low."""
+    text = text.strip()
+
+    if not text:
+        return {
+            "intent": "unknown",
+            "confidence": 0.0,
+            "accepted": False,
+        }
+
+    model = load_classifier()
+
+    probabilities = model.predict_proba([text])[0]
+    classes = model.named_steps["classifier"].classes_
+
+    best_index = int(probabilities.argmax())
+    confidence = float(probabilities[best_index])
+    predicted_intent = str(classes[best_index])
+
+    accepted = confidence >= threshold
+
+    return {
+        "intent": predicted_intent if accepted else "unknown",
+        "candidate_intent": predicted_intent,
+        "confidence": round(confidence, 4),
+        "accepted": accepted,
+    }
+
+
+if __name__ == "__main__":
+    print("GENESIS Intent Classifier")
+    print("Type /exit to quit.")
+
+    while True:
+        try:
+            text = input("\nYou > ").strip()
+        except (EOFError, KeyboardInterrupt):
+            print()
+            break
+
+        if text.lower() in {"/exit", "exit", "quit"}:
+            break
+
+        try:
+            print(predict_intent(text))
+        except FileNotFoundError as exc:
+            print(exc)
+            break

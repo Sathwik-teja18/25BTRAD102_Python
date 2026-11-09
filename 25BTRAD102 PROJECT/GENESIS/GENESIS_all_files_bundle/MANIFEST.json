@@ -1,0 +1,67 @@
+{
+  "purpose": "Preservation bundle of all GENESIS-related source/archive files available in this session.",
+  "preservation_note": "Original pasted versions and saved project versions are preserved separately; none were overwritten. The saved library genesis.py is included as an additional version.",
+  "availability_limit": "A complete standalone cortex.py and genesis_ml.py were not found among the files available to this session. The starter genesis.py contains an embedded seed cortex source, but that is not the same as preserving the user's separate local cortex.py or genesis_ml.py. Those files are not fabricated in this archive.",
+  "files": [
+    {
+      "path": "archives/genesis_starter_original.zip",
+      "size_bytes": 17219,
+      "sha256": "71fa63f6571759423594cb781a305fbee83212665005a248ea84ec0fcc21bf00",
+      "lines": 67
+    },
+    {
+      "path": "genesis_starter/README.md",
+      "size_bytes": 4604,
+      "sha256": "07d8940ca684804d71dce184b01937002d9f893756d9c7a0a924d98bda273bec",
+      "lines": 76
+    },
+    {
+      "path": "genesis_starter/genesis.py",
+      "size_bytes": 48113,
+      "sha256": "2127f25e4b0b7b11228ec41bcec931248a098c1f02630a1b4e201adca3b553a3",
+      "lines": 1002
+    },
+    {
+      "path": "genesis_starter/requirements.txt",
+      "size_bytes": 145,
+      "sha256": "55e42df8ad345d2db4c25eb299824ec5957162914fe8aef09e0dd230a302482f",
+      "lines": 3
+    },
+    {
+      "path": "genesis_starter/test_genesis.py",
+      "size_bytes": 2329,
+      "sha256": "e726c6025f0070932393d4402274aef8bbe35076b53188a69a29b5e53301e422",
+      "lines": 54
+    },
+    {
+      "path": "genesis_versions/genesis_version_1_model_tiers_only.py",
+      "size_bytes": 15156,
+      "sha256": "c6fabde4cbabe793ee2fee759c7af54f842e9bbc9161a232ae66f48145bc72de",
+      "lines": 509
+    },
+    {
+      "path": "genesis_versions/genesis_version_2_auto_router.py",
+      "size_bytes": 19749,
+      "sha256": "abcff50acccb015be16be02e2996984ebe23b2878d0fe06b1b3d2ebb2f999acc",
+      "lines": 646
+    },
+    {
+      "path": "original_pastes/genesis_version_1_original.txt",
+      "size_bytes": 15156,
+      "sha256": "c6fabde4cbabe793ee2fee759c7af54f842e9bbc9161a232ae66f48145bc72de",
+      "lines": 509
+    },
+    {
+      "path": "original_pastes/genesis_version_2_original.txt",
+      "size_bytes": 19749,
+      "sha256": "abcff50acccb015be16be02e2996984ebe23b2878d0fe06b1b3d2ebb2f999acc",
+      "lines": 646
+    },
+    {
+      "path": "saved_library_versions/genesis_library_saved.py",
+      "size_bytes": 50765,
+      "sha256": "c2d2d31597fb0b3e6e5b497027f5a3a29ea909698df64933ae6064551bc32ad4",
+      "lines": 1058
+    }
+  ]
+}
