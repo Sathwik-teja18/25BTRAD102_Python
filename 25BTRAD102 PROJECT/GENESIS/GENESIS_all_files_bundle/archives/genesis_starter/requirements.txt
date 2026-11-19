@@ -1,3 +1,0 @@
-# No third-party Python packages are required by the GENESIS kernel itself.
-# Optional package used by an evolved hardware-stats skill:
-# psutil
