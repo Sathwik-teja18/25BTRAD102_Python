@@ -1,0 +1,2 @@
+# Additional dependency for the GENESIS desktop interface
+PySide6>=6.7

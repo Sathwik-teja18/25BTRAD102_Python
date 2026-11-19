@@ -1,0 +1,11 @@
+{
+  "date_utc": "2026-11-03",
+  "spent_usd": "0",
+  "reserved_usd": "0.0050804",
+  "pricing": {
+    "model": "gpt-4.1-mini",
+    "input_usd_per_million": "0.4",
+    "output_usd_per_million": "1.6",
+    "daily_budget_usd": "1"
+  }
+}
